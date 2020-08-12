@@ -74,7 +74,7 @@ function draw() {
 			est = alvo * 4 / count;
 			estLabel.html(nf(est, 1, 6));
 			erro = abs((est - PI) / PI) * 100;
-			erroLabel.html(nf(erro, 2, 2) + "%");
+			erroLabel.html(nf(erro, 1, 2) + "%");
 			// Prepare the points for the plot
 			points[count - 1] = new GPoint(count, est);
 			pointsPI[count - 1] = new GPoint(count, PI);
