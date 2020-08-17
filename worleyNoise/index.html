@@ -1,0 +1,118 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <!-- this line removes any default padding and style. you might only need one of these values set. -->
+<link rel="stylesheet" type="text/css" href="style.css">
+  <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+  <!-- uncomment lines below to include extra p5 libraries -->
+  <script language="javascript" src="libraries/p5.dom.js"></script>
+  <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+  <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified CSS -->
+</head>
+<body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <div class="container">
+          <ul class="nav navbar-nav">
+          <p class="navbar-brand" href="#" style="color: #f5f5f5;">Worley Noise</p>
+          <li class="pull-left" style="margin-left:100px;font-size:large;"><a href="#" data-toggle="modal" data-target="#infoPage">Info</a></li>
+          <li class="pull-right"style="font-size:large;"><a href="#" data-toggle="modal" data-target="#aboutPage">About</a></li>
+          
+          
+
+          </ul>
+      </div>
+    </nav>
+<div id="game">
+</div>
+
+<div id="aboutPage" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">About</h4>
+      </div>
+      <div class="modal-body">
+        <p>So what is this page all about?<br>
+        Check out the following video for an explaination of what the Worley Noise is all about
+        </p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/4066MndcyCk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="modal-footer">
+        <p class="pull-left">Created by <a href="https://github.com/mvilarinho/">mvilarinho</a> and inspired in this 
+          <a href="https://thecodingtrain.com/challenges/coding-in-the-cabana/004-worley-noise.html">Challenge</a></p> 
+        <p class="pull-left">Visit the article in <a href="https://en.wikipedia.org/wiki/Worley_noise">Wikipedia</a> and this very nice web <a href="https://thebookofshaders.com/12/"> The Book of Shaders </a></p>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="infoPage" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Info</h4>
+      </div>
+      <div class="modal-body">
+        <p>What's the matter about slides and checkbox?<br>
+        
+        <ul>
+          <li> <b>Seed Points</b> are the number of random initial points. </li>
+          <li> <b>n-th distance</b> is the position of the distance that the algorithm takes to the seed points, in ascending order.
+          For example, if n=1, we have a Voronoi Diagram. </li>
+          <li> <b>Palette</b> in color mode, is a choice of a RGB colors permutation (3!=6).</li>
+          <li> <b>Bright</b> is the percentage apply to the RGB value. Example if bright equal a 50%, max value= 50% of 255=127.</li>
+          <li> <b>Ratio</b> if the distance to one pixel is out of range fixed by the ratio, this pixel will be painted black (or white in dual mode).</li>
+          <li> <b>Dual</b> Reverse the order of RGB values or gray scale.</li>
+          <li> <b>Color</b> Switch color mode to gray scale mode and vice versa.</li>
+        </ul>
+        <b>Animation-> </b>For each frame, seed points move a random value wich causes the movement.<br>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer navbar-default navbar-inverse">
+      <div class="container text-center">
+        <h1 class="pull-left"><p style="margin-left:30px;" id="Nslider"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:10px" id="NsliderLabel"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:30px;" id="nslider"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:10px" id="nsliderLabel"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:30px;" id="pslider"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:10px" id="psliderLabel"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:10px" id="BsliderLabel"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:30px" id="Bslider"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:10px" id="RsliderLabel"></p></h1>
+        <h1 class="pull-left"><p style="margin-left:30px;margin-right:30px;" id="Rslider"></p></h1>
+        <h3 class="pull-right"><p style="font-size:medium;color:blanchedalmond;margin-left:30px;" >Color
+          <input type="checkbox" id="color"> </p></h3>
+        <h3 class="pull-right"><p style="font-size:medium;color:blanchedalmond;margin-left:50px;" >Dual
+            <input type="checkbox" id="dual"> </p></h3>
+          
+      </div>
+    </footer>
+</body>
+</html>
