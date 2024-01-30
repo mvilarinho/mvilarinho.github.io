@@ -13,7 +13,7 @@
 1. [Example of Mental Calculation](http://mvilarinho.github.io/piEstimation)
 2. [Settings of Mental Calculation](http://mvilarinho.pythonanywhere.com/cmental)
 3. [Binary Cards](http://mvilarinho.pythonanywhere.com/tbinarias)
-4. [Zeckendorf's Theorem](http://mvilarinho.pythonanywhere.com/zenckendorf)
+4. [Zeckendorf's Theorem](http://mvilarinho.pythonanywhere.com/zeckendorf)
 5. [Guess a Number](http://mvilarinho.pythonanywhere.com/guessNumber)
 
 For more projects in `python` you can visit [this web](http://mvilarinho.pythonanywhere.com) 
