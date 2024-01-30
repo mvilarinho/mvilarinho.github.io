@@ -10,7 +10,7 @@
 
 ## Index of `reveal` works
 
-1. [Example of Mental Calculation](http://mvilarinho.github.io/piEstimation)
+1. [Example of Mental Calculation](http://mvilarinho.pythonanywhere.com/cmental/0/12000/7/24/40/9)
 2. [Settings of Mental Calculation](http://mvilarinho.pythonanywhere.com/cmental)
 3. [Binary Cards](http://mvilarinho.pythonanywhere.com/tbinarias)
 4. [Zeckendorf's Theorem](http://mvilarinho.pythonanywhere.com/zeckendorf)
